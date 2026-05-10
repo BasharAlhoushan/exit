@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exit Escape Room</title>
+  <meta name="description" content="تجربة الهروب الحقيقية الوحيدة في نابلس">
+  <meta property="og:title"       content="Exit Escape Room">
+  <meta property="og:description" content="تجربة الهروب الحقيقية الوحيدة في نابلس">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"       content="summary_large_image">
+  <link rel="icon" href="assets/b4b05067c10fa810f472a74f0226d673.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app" dir="rtl">
+
+  <!-- ======================================================
+       HERO SECTION
+       ====================================================== -->
+  <section class="hero-section">
+
+    <!-- Background layers -->
+    <div class="hero-bg">
+      <img src="assets/hero-bg.jpg" alt="" class="hero-bg-img">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-grid"></div>
+      <div class="hero-fog-1"></div>
+      <div class="hero-fog-2"></div>
+      <div class="hero-vignette"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="nav">
+      <div class="nav-logo">
+        <div class="logo-glow"></div>
+        <img src="assets/b4b05067c10fa810f472a74f0226d673.png" alt="Exit Escape Room" class="logo-img">
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav-links" aria-label="main navigation">
+        <a href="#what"       class="nav-link" data-i18n="nav.what"></a>
+        <a href="#how"        class="nav-link" data-i18n="nav.how"></a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience"></a>
+        <a href="#faq"        class="nav-link" data-i18n="nav.faq"></a>
+
+
+
+        <button id="lang-btn" class="lang-btn">
+          <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/>
+            <path d="M2 5h12"/><path d="M7 2h1"/>
+            <path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
+          </svg>
+          <span data-i18n="nav.langSwitch"></span>
+        </button>
+
+        <a href="https://exitps.simplybook.me/v2/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcARsE3hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdH6u1PCyLihp9c8-NjV_kIS_jJ4sDg8t9t6qj55NINcO-9eN9cJcy4C7-ww_aem__nb5PjTGkbFYBO7-u8lcMQ" target="_blank" rel="noopener noreferrer" class="nav-book-btn">
+          <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+          </svg>
+          <span data-i18n="nav.book"></span>
+        </a>
+      </nav>
+
+      <!-- Mobile Controls (Left side) -->
+      <div class="mobile-controls">
+        <button id="lang-btn-mobile" class="lang-btn">
+          <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/>
+            <path d="M2 5h12"/><path d="M7 2h1"/>
+            <path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>
+          </svg>
+          <span data-i18n="nav.langSwitch"></span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="toggle menu">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#what"       class="mobile-link" data-i18n="nav.what"></a>
+        <a href="#how"        class="mobile-link" data-i18n="nav.how"></a>
+        <a href="#experience" class="mobile-link" data-i18n="nav.experience"></a>
+        <a href="#faq"        class="mobile-link" data-i18n="nav.faq"></a>
+        <a href="https://exitps.simplybook.me/v2/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcARsE3hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdH6u1PCyLihp9c8-NjV_kIS_jJ4sDg8t9t6qj55NINcO-9eN9cJcy4C7-ww_aem__nb5PjTGkbFYBO7-u8lcMQ" target="_blank" rel="noopener noreferrer" class="mobile-book-btn" data-i18n="nav.book"></a>
+      </div>
+    </header>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+
+      <!-- Clock image (visual side) -->
+      <div class="hero-image-col" id="hero-image-col" style="display: flex; justify-content: center; align-items: center;">
+        <h2 class="section-title text-neon animate-flicker animate-bounce-up-down" data-i18n="hero.canYouEscape" style="text-align: center;"></h2>
+      </div>
+
+      <!-- Text content -->
+      <div class="hero-text-col" id="hero-text-col">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-i18n="hero.badge"></span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="hero-title-a" data-i18n="hero.titleA"></span>
+          <span class="hero-title-b text-neon animate-flicker" data-i18n="hero.titleB"></span>
+        </h1>
+
+        <p class="hero-subtitle">
+          <span data-i18n="hero.subtitle"></span><br>
+          <strong data-i18n="hero.duration"></strong>
+          <span> </span>
+          <span data-i18n="hero.tail"></span>
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="https://exitps.simplybook.me/v2/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcARsE3hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdH6u1PCyLihp9c8-NjV_kIS_jJ4sDg8t9t6qj55NINcO-9eN9cJcy4C7-ww_aem__nb5PjTGkbFYBO7-u8lcMQ" target="_blank" rel="noopener noreferrer" class="hero-cta-btn">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="7.5" cy="15.5" r="5.5"/>
+              <path d="m21 2-9.6 9.6"/>
+              <path d="m15.5 7.5 3 3L22 7l-3-3"/>
+            </svg>
+            <span data-i18n="hero.cta"></span>
+          </a>
+          <a href="#what" class="hero-explore-btn">
+            <span data-i18n="hero.explore"></span>
+            <svg class="icon animate-bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats (populated by JS) -->
+        <div class="hero-stats" id="hero-stats"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ======================================================
+       FAQ SECTION
+       ====================================================== -->
+  <section id="what" class="faq-section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="faq-icon-wrap">
+          <svg class="icon-xl text-neon animate-pulse" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <path d="M12 17h.01"/>
+          </svg>
+        </div>
+        <h2 class="section-title">
+          <span data-i18n="faq.eyebrow"></span><br>
+          <span class="text-neon" data-i18n="faq.title"></span>
+        </h2>
+        <p class="section-hint" data-i18n="faq.hint"></p>
+      </div>
+
+      <!-- FAQ items injected by JS -->
+      <div id="how" class="faq-list"></div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCE SECTION
+       ====================================================== -->
+  <section id="experience" class="experience-section">
+    <div class="container experience-grid">
+
+      <!-- Text side -->
+      <div class="experience-text">
+        <div class="eyebrow">
+          <svg class="icon-sm text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span data-i18n="exp.eyebrow"></span>
+        </div>
+        <h2 class="section-title">
+          <span data-i18n="exp.titleA"></span><br>
+          <span class="text-neon" data-i18n="exp.titleB"></span><br>
+          <span data-i18n="exp.titleC"></span>
+        </h2>
+        <p class="exp-body" data-i18n="exp.body"></p>
+
+        <!-- Tabs injected by JS -->
+        <div class="exp-tabs" id="exp-tabs"></div>
+
+        <!-- Active tab description -->
+        <p class="exp-desc" id="exp-desc"></p>
+      </div>
+
+      <!-- Image side -->
+      <div class="experience-image-wrap">
+        <img src="assets/images.jpg" alt="" class="experience-img" id="exp-img" loading="lazy">
+        <div class="experience-img-overlay"></div>
+        <div class="experience-img-footer">
+          <div>
+            <div class="exp-now text-neon" id="exp-now-label" data-i18n="exp.now"></div>
+            <div class="exp-label font-display" id="exp-label"></div>
+          </div>
+          <!-- Dots injected by JS -->
+          <div class="exp-dots" id="exp-dots"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       GALLERY SECTION  (nav id="faq" → points here)
+       ====================================================== -->
+  <section id="faq" class="gallery-section">
+    <div class="container">
+
+      <div class="gallery-header">
+        <div>
+          <div class="eyebrow-text text-neon" data-i18n="gallery.eyebrow"></div>
+          <h2 class="section-title">
+            <span data-i18n="gallery.titleA"></span> <span class="text-neon" data-i18n="gallery.titleB"></span>
+          </h2>
+        </div>
+        <p class="gallery-hint" data-i18n="gallery.hint"></p>
+      </div>
+
+      <!-- Gallery items injected by JS -->
+      <div class="gallery-grid" id="gallery-grid"></div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOCIAL FEED SECTION
+       ====================================================== -->
+  <section class="social-section">
+    <div class="bg-grid-overlay"></div>
+    <div class="container" style="position:relative;z-index:1;">
+
+      <div class="section-header" style="margin-bottom:4rem;">
+        <div class="eyebrow-text text-neon" data-i18n="social.eyebrow"></div>
+        <h2 class="section-title">
+          <span data-i18n="social.titleA"></span><span class="text-neon" data-i18n="social.titleB"></span>
+        </h2>
+        <p class="section-hint" data-i18n="social.subtitle"></p>
+      </div>
+
+      <!-- Desktop: dual-column infinite marquee -->
+      <div class="social-marquee-wrap">
+        <div class="social-marquee-mask-top"></div>
+        <div class="social-marquee-mask-bottom"></div>
+        <div class="social-col animate-marquee-up"   id="social-col-left"></div>
+        <div class="social-col animate-marquee-down" id="social-col-right"></div>
+      </div>
+
+      <!-- Mobile: horizontal scroll -->
+      <div class="social-mobile" id="social-mobile"></div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FINAL CTA SECTION
+       ====================================================== -->
+  <section id="book" class="cta-section">
+    <div class="cta-bg-grid"></div>
+    <div class="cta-glow animate-heartbeat"></div>
+    <div class="container cta-content">
+      <svg class="cta-clock icon-xl text-neon animate-tick" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+
+      <h2 class="cta-title">
+        <span data-i18n="cta.pre"></span><span class="text-neon animate-flicker" data-i18n="cta.mid"></span><span data-i18n="cta.post"></span>
+      </h2>
+      <p class="cta-sub" data-i18n="cta.sub"></p>
+      <a href="https://exitps.simplybook.me/v2/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcARsE3hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdH6u1PCyLihp9c8-NjV_kIS_jJ4sDg8t9t6qj55NINcO-9eN9cJcy4C7-ww_aem__nb5PjTGkbFYBO7-u8lcMQ" target="_blank" rel="noopener noreferrer" class="cta-btn">
+        <svg class="icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="7.5" cy="15.5" r="5.5"/>
+          <path d="m21 2-9.6 9.6"/>
+          <path d="m15.5 7.5 3 3L22 7l-3-3"/>
+        </svg>
+        <span data-i18n="cta.btn"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SOCIAL BAR
+       ====================================================== -->
+  <div class="social-bar">
+    <div class="container social-bar-inner">
+      <a href="https://www.instagram.com/exit_escaperoom?igsh=MXVrM3dqeTdrbG5sYw=="
+         target="_blank" rel="noopener noreferrer" class="social-bar-link">
+        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/share/1BJiCsb6ic/"
+         target="_blank" rel="noopener noreferrer" class="social-bar-link">
+        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        Facebook
+      </a>
+
+      <a href="https://www.tiktok.com/@exit_escaperoom?_r=1&_t=ZN-96A93N8uhok"
+         target="_blank" rel="noopener noreferrer" class="social-bar-link">
+        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+          <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.33V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/>
+        </svg>
+        TikTok
+      </a>
+
+      <a href="tel:+972593333369" class="social-bar-link">
+        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 13 19.79 19.79 0 0 1 1.27 4.38 2 2 0 0 1 3.25 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span dir="ltr">+972 593333369</span>
+      </a>
+
+      <a href="https://maps.app.goo.gl/HK9DJW4PynhfSE1u5?g_st=ac"
+         target="_blank" rel="noopener noreferrer" class="social-bar-link">
+        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span data-i18n="socialbar.location"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="logo-glow"></div>
+          <img src="assets/b4b05067c10fa810f472a74f0226d673.png" alt="Exit Escape Room" class="logo-img">
+        </div>
+        <p class="footer-desc" data-i18n="footer.desc"></p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading text-neon" data-i18n="footer.contact"></h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://maps.app.goo.gl/HK9DJW4PynhfSE1u5?g_st=ac"
+               target="_blank" rel="noopener noreferrer" class="footer-link">
+              <svg class="icon-sm text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span data-i18n="footer.city"></span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+972593333369" class="footer-link">
+              <svg class="icon-sm text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 13 19.79 19.79 0 0 1 1.27 4.38 2 2 0 0 1 3.25 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span dir="ltr">+972 593333369</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Exit.palestine@gmail.com" class="footer-link">
+              <svg class="icon-sm text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              Exit.palestine@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading text-neon" data-i18n="footer.follow"></h4>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/exit_escaperoom?igsh=MXVrM3dqeTdrbG5sYw=="
+             target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/share/1BJiCsb6ic/"
+             target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@exit_escaperoom?_r=1&_t=ZN-96A93N8uhok"
+             target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="TikTok">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+              <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.33V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      &copy; <span id="year"></span> Exit Escape Room
+    </div>
+  </footer>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
