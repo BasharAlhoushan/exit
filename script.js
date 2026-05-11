@@ -8,9 +8,9 @@ const translations = {
     dir: 'rtl',
     nav: {
       what: 'ما هي غرفة الهروب؟',
-      how: 'كيف نلعب؟',
+      community: 'مجتمعنا',
       experience: 'التجربة',
-      faq: 'الأسئلة',
+      faq: 'الغرف',
       book: 'احجز الآن',
       langSwitch: 'English',
     },
@@ -59,7 +59,7 @@ const translations = {
       tabs: [
         { label: 'أصحاب', desc: 'ضحك، صراخ، وتحدي بين الشلة.' },
         { label: 'عيلة', desc: 'مغامرة بتقرّب الكل تحت الضغط.' },
-        { label: 'فريق العمل', desc: 'Team building حقيقي مش اجتماع ممل.' },
+        { label: 'الشركات', desc: 'بناء الفريق والتحدي بين الزملاء.' },
         { label: 'مغامرون', desc: 'تحدي حقيقي لعشاق الغموض والإثارة.' },
       ],
       now: 'الآن',
@@ -80,6 +80,7 @@ const translations = {
       titleA: 'شاركنا ',
       titleB: 'رعبك',
       subtitle: 'تفاعل معنا على وسائل التواصل الاجتماعي',
+      rateBtn: 'قيّمنا على جوجل',
     },
     cta: {
       pre: 'هل ',
@@ -99,9 +100,9 @@ const translations = {
     dir: 'ltr',
     nav: {
       what: "What's Escape Room?",
-      how: 'How to Play?',
+      community: 'Our Community',
       experience: 'The Experience',
-      faq: 'FAQ',
+      faq: 'Rooms',
       book: 'Book Now',
       langSwitch: 'عربي',
     },
@@ -150,7 +151,7 @@ const translations = {
       tabs: [
         { label: 'Friends', desc: 'Laughs, screams, and rivalry between the crew.' },
         { label: 'Family', desc: 'An adventure that pulls everyone together under pressure.' },
-        { label: 'Coworkers', desc: 'Real team building — not a boring meeting.' },
+        { label: 'Corporate', desc: 'Team building and challenge between colleagues.' },
         { label: 'Adventurers', desc: 'A real challenge for lovers of mystery and thrill.' },
       ],
       now: 'Now Playing',
@@ -171,6 +172,7 @@ const translations = {
       titleA: 'Share Your ',
       titleB: 'Fear',
       subtitle: 'Interact with us on social media',
+      rateBtn: 'Rate us on Google',
     },
     cta: {
       pre: 'Do you ',
@@ -202,16 +204,16 @@ const state = {
    ASSETS
    ============================================================ */
 const EXP_IMAGES = [
-  'assets/WhatsApp Image 2026-05-09 at 7.21.26 PM.jpeg',
-  'assets/WhatsApp Image 2026-05-09 at 7.21.226 PM.jpeg',
-  'assets/WhatsApp Image 2026-05-09 at 7.251.27 PM.jpeg',
-  'assets/WhatsApp Image 2026-05-09 at 7.321.27 PM.jpeg',
+  'assets/exp-2.jpeg',
+  'assets/family.jpeg',
+  ['assets/co1.jpeg', 'assets/co2.jpeg', 'assets/co3.jpeg'],
+  'assets/exp-4.jpeg',
 ];
 
 const GALLERY_IMAGES = [
-  'assets/clown.jpg',
-  'assets/key.png',
-  'assets/WhatsApp Image 2026-05-09 at 7.20.09 PM.jpeg',
+  'assets/screenshot-2026-05-11-110423.png',
+  'assets/whatsapp-image-2026-05-09-at-7-20-09-pm.jpeg',
+  'assets/gallery-3.jpeg',
   'assets/hero-bg.jpg',
 ];
 
@@ -222,7 +224,7 @@ const POSTS = [
     user: '@exit.escape',
     content_ar: 'أقوى تجربة هروب! حليتوا اللغز؟',
     content_en: 'Best escape experience ever! Did you solve the puzzle?',
-    image: 'assets/لقطة شاشة 2026-05-10 150445.png',
+    image: 'assets/social-1.png',
     likes: '1.2k',
   },
   {
@@ -231,7 +233,7 @@ const POSTS = [
     user: 'Exit Escape Room',
     content_ar: 'مين بيقدر يهرب في أقل من 60 دقيقة؟ منشن فريقك.',
     content_en: 'Who can escape in under 60 minutes? Tag your team.',
-    image: 'assets/لقطة شاشة 2026-05-10 150652.png',
+    image: 'assets/social-2.png',
     likes: '850',
   },
   {
@@ -240,7 +242,7 @@ const POSTS = [
     user: '@horror_fan',
     content_ar: 'الأجواء خرافية والرعب حقيقي! انصح بالزيارة.',
     content_en: 'The atmosphere is incredible and the horror is real! Highly recommend.',
-    image: 'assets/لقطة شاشة 2026-05-10 150715.png',
+    image: 'assets/social-3.png',
     likes: '450',
   },
   {
@@ -249,7 +251,7 @@ const POSTS = [
     user: 'أحمد علي',
     content_ar: 'تجربة رهيبة، الألغاز ذكية جداً والقصة مشوقة.',
     content_en: 'Amazing experience — clever puzzles and a gripping story.',
-    image: 'assets/لقطة شاشة 2026-05-10 150805.png',
+    image: 'assets/social-4.png',
     likes: '300',
   },
 ];
@@ -373,6 +375,8 @@ function renderExpTabs() {
   });
 }
 
+let coInterval = null;
+
 function renderExpContent(animate) {
   const tabs = t().exp.tabs;
   const idx = state.expIdx;
@@ -381,19 +385,43 @@ function renderExpContent(animate) {
   const desc = q('#exp-desc');
   const dots = q('#exp-dots');
   const now = q('#exp-now-label');
+  const grid = q('#exp-img-grid');
 
-  if (img) {
-    if (animate) {
-      img.style.opacity = '0';
-      setTimeout(() => {
-        img.src = EXP_IMAGES[idx];
+  const content = EXP_IMAGES[idx];
+
+  // Clear previous slideshow interval
+  if (coInterval) {
+    clearInterval(coInterval);
+    coInterval = null;
+  }
+
+  if (img && grid) {
+    if (Array.isArray(content)) {
+      // Companies tab (show grid)
+      img.style.display = 'none';
+      grid.style.display = 'grid';
+      
+      grid.innerHTML = content.map(src => 
+        `<img src="${src}" class="exp-grid-img" loading="lazy" onclick="selectCompanyImg('${src}')">`
+      ).join('');
+      
+    } else {
+      // Normal tab (show single image)
+      grid.style.display = 'none';
+      img.style.display = 'block';
+      
+      if (animate) {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = content;
+          img.alt = tabs[idx].label;
+          img.style.opacity = '1';
+        }, 200);
+      } else {
+        img.src = content;
         img.alt = tabs[idx].label;
         img.style.opacity = '1';
-      }, 200);
-    } else {
-      img.src = EXP_IMAGES[idx];
-      img.alt = tabs[idx].label;
-      img.style.opacity = '1';
+      }
     }
   }
 
@@ -407,6 +435,18 @@ function renderExpContent(animate) {
       .join('');
   }
 }
+
+// Global function for click handler
+window.selectCompanyImg = function(src) {
+  const img = q('#exp-img');
+  const grid = q('#exp-img-grid');
+  if (img && grid) {
+    img.src = src;
+    img.style.display = 'block';
+    img.style.opacity = '1';
+    grid.style.display = 'none';
+  }
+};
 
 let expInterval = null;
 

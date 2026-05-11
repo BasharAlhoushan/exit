@@ -9,10 +9,7 @@
   <meta property="og:description" content="تجربة الهروب الحقيقية الوحيدة في نابلس">
   <meta property="og:type"        content="website">
   <meta name="twitter:card"       content="summary_large_image">
-  <link rel="icon" href="assets/b4b05067c10fa810f472a74f0226d673.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,13 +34,13 @@
     <header class="nav">
       <div class="nav-logo">
         <div class="logo-glow"></div>
-        <img src="assets/b4b05067c10fa810f472a74f0226d673.png" alt="Exit Escape Room" class="logo-img">
+        <img src="assets/logo.png" alt="Exit Escape Room" class="logo-img">
       </div>
 
       <!-- Desktop nav -->
       <nav class="nav-links" aria-label="main navigation">
         <a href="#what"       class="nav-link" data-i18n="nav.what"></a>
-        <a href="#how"        class="nav-link" data-i18n="nav.how"></a>
+        <a href="#social"     class="nav-link" data-i18n="nav.community"></a>
         <a href="#experience" class="nav-link" data-i18n="nav.experience"></a>
         <a href="#faq"        class="nav-link" data-i18n="nav.faq"></a>
 
@@ -96,7 +93,7 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="mobile-menu">
         <a href="#what"       class="mobile-link" data-i18n="nav.what"></a>
-        <a href="#how"        class="mobile-link" data-i18n="nav.how"></a>
+        <a href="#social"     class="mobile-link" data-i18n="nav.community"></a>
         <a href="#experience" class="mobile-link" data-i18n="nav.experience"></a>
         <a href="#faq"        class="mobile-link" data-i18n="nav.faq"></a>
         <a href="https://exitps.simplybook.me/v2/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcARsE3hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdH6u1PCyLihp9c8-NjV_kIS_jJ4sDg8t9t6qj55NINcO-9eN9cJcy4C7-ww_aem__nb5PjTGkbFYBO7-u8lcMQ" target="_blank" rel="noopener noreferrer" class="mobile-book-btn" data-i18n="nav.book"></a>
@@ -224,7 +221,8 @@
 
       <!-- Image side -->
       <div class="experience-image-wrap">
-        <img src="assets/images.jpg" alt="" class="experience-img" id="exp-img" loading="lazy">
+        <img src="assets/experience-main.jpg" alt="" class="experience-img" id="exp-img" loading="lazy">
+        <div id="exp-img-grid" class="exp-img-grid" style="display: none;"></div>
         <div class="experience-img-overlay"></div>
         <div class="experience-img-footer">
           <div>
@@ -264,7 +262,7 @@
   <!-- ======================================================
        SOCIAL FEED SECTION
        ====================================================== -->
-  <section class="social-section">
+  <section id="social" class="social-section">
     <div class="bg-grid-overlay"></div>
     <div class="container" style="position:relative;z-index:1;">
 
@@ -274,6 +272,14 @@
           <span data-i18n="social.titleA"></span><span class="text-neon" data-i18n="social.titleB"></span>
         </h2>
         <p class="section-hint" data-i18n="social.subtitle"></p>
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center;">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJAVhgiznhHBURA4uMbRLU9LM" target="_blank" rel="noopener noreferrer" class="hero-cta-btn" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.9rem; display: flex; align-items: center; text-decoration: none;">
+            <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-inline-end: 0.5rem;">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span data-i18n="social.rateBtn"></span>
+          </a>
+        </div>
       </div>
 
       <!-- Desktop: dual-column infinite marquee -->
@@ -321,62 +327,7 @@
     </div>
   </section>
 
-  <!-- ======================================================
-       SOCIAL BAR
-       ====================================================== -->
-  <div class="social-bar">
-    <div class="container social-bar-inner">
-      <a href="https://www.instagram.com/exit_escaperoom?igsh=MXVrM3dqeTdrbG5sYw=="
-         target="_blank" rel="noopener noreferrer" class="social-bar-link">
-        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-        Instagram
-      </a>
 
-      <a href="https://www.facebook.com/share/1BJiCsb6ic/"
-         target="_blank" rel="noopener noreferrer" class="social-bar-link">
-        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-        </svg>
-        Facebook
-      </a>
-
-      <a href="https://www.tiktok.com/@exit_escaperoom?_r=1&_t=ZN-96A93N8uhok"
-         target="_blank" rel="noopener noreferrer" class="social-bar-link">
-        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-          <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.33V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/>
-        </svg>
-        TikTok
-      </a>
-
-      <a href="tel:+972593333369" class="social-bar-link">
-        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 13 19.79 19.79 0 0 1 1.27 4.38 2 2 0 0 1 3.25 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        <span dir="ltr">+972 593333369</span>
-      </a>
-
-      <a href="https://maps.app.goo.gl/HK9DJW4PynhfSE1u5?g_st=ac"
-         target="_blank" rel="noopener noreferrer" class="social-bar-link">
-        <svg class="icon-lg text-neon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-          <circle cx="12" cy="10" r="3"/>
-        </svg>
-        <span data-i18n="socialbar.location"></span>
-      </a>
-    </div>
-  </div>
 
   <!-- ======================================================
        FOOTER
@@ -387,7 +338,7 @@
       <div class="footer-col">
         <div class="footer-logo">
           <div class="logo-glow"></div>
-          <img src="assets/b4b05067c10fa810f472a74f0226d673.png" alt="Exit Escape Room" class="logo-img">
+          <img src="assets/logo.png" alt="Exit Escape Room" class="logo-img">
         </div>
         <p class="footer-desc" data-i18n="footer.desc"></p>
       </div>
